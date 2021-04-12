@@ -11,13 +11,11 @@ int main(){
     int conection = 0;
     int socket_id = 0; // Identificador de socket devuelto por la función socket()
     char msg[] = "GET / HTTP/1.1\r\n"
-                 "Host: localhost\r\n"
-                 "Connection: Keep-alive\r\n"
-                 "Cache-Control: max-age=0\r\n"
-                 "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,;q=0.8\r\n"
                  "User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36\r\n"
+                 "Host: www.wikipedia"
                  "Accept-Encoding: gzip, deflate, sdch\r\n"
-                 "Accept-Language: en-US,en;q=0.8\r\n\r\n";
+                 "Accept-Language: es-mx,en;q=0.8\r\n\r\n"
+                 "Connection: Keep-alive\r\n";
 
   //socket(int dominio, int tipo, int protocolo)
     socket_id = socket(PF_INET, SOCK_STREAM, 0);
@@ -27,7 +25,7 @@ int main(){
     
     struct sockaddr_in server; //nombre de structura
     server.sin_family = AF_INET; //Dominio donde se realiza la conexion
-    server.sin_addr.s_addr = "www.google.com"//inet_addr("172.217.173.196"); //Esta es una ip de unos de los servidores de google
+    server.sin_addr.s_addr = inet_addr("172.217.173.196"); //Esta es una ip de unos de los servidores de google
     server.sin_port = htons(80); //el puerto de internet
 
 
