@@ -27,7 +27,7 @@ int main(){
     
     struct sockaddr_in server; //nombre de structura
     server.sin_family = AF_INET; //Dominio donde se realiza la conexion
-    server.sin_addr.s_addr = inet_addr("172.217.173.196"); //Esta es una ip de unos de los servidores de google
+    server.sin_addr.s_addr = "www.google.com"//inet_addr("172.217.173.196"); //Esta es una ip de unos de los servidores de google
     server.sin_port = htons(80); //el puerto de internet
 
 
