@@ -27,8 +27,8 @@ int main(){
 
     struct sockaddr_in server; //nombre de structura
     server.sin_family = AF_INET; //Dominio donde se realiza la conexion
-    server.sin_addr.s_addr = inet_addr("127.0.0.1"); //Esta es una ip de unos de los servidores de google
-    server.sin_port = htons(5000); //el puerto de internet
+    server.sin_addr.s_addr = inet_addr("127.0.0.1"); //Esta es la ip interna del equipo
+    server.sin_port = htons(5000); //el puerto de del equipo
 
 
 /*connect () se usa para conectarse a una dirección de [servidor] remota
